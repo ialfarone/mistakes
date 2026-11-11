@@ -73,7 +73,7 @@ Solution
 ========
 
 Die Mann-Whitney-$U$-Statistik für Gruppe A wird berechnet, indem alle paarweisen Vergleiche gezählt werden, die Gruppe A gewinnt: 
-`r t$solution`
+$U$ = `r t$solution`
 
 
 ```{r solutionlist, echo = FALSE, results = "asis"}
