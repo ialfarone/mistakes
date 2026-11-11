@@ -2,26 +2,29 @@ library(exams)
 
 oodir <- "."
 oldname <- "mistakes"
-newname <- "fixed"
+newname <- "mannwhitney1"
 
 # R exams does not read the YAML parameters of the Rmd files
 LANGUAGE <<- "de"
 
 myexam <- list(
-  tratio="tratio.de.Rmd",
-  lqnorm="lpnorm.Rmd")
+  mannwhitney1="mannwhitney1_de.Rmd",
+  mannwhitney2="mannwhitney2_de.Rmd",
+  mannwhitney3="mannwhitney3_de.Rmd",
+  mannwhitney4="mannwhitney4_de.Rmd",
+  mannwhitney5="mannwhitney5_de.Rmd",
+  mannwhitney6="mannwhitney6_de.Rmd"
+)
 
 exams2openolat(myexam,
-  dir=oodir, name=oldname, 
-  edir=system.file("rexams", package="mistakes"),
-  solutionswitch=TRUE)
+               dir=oodir, name=oldname, 
+               edir=system.file("rexams", package="mistakes"),
+               solutionswitch=TRUE)
 
 oldzip <- normalizePath(file.path(oodir, sprintf("%s.zip", oldname)), winslash="/")
 newzip <- normalizePath(file.path(oodir, sprintf("%s.zip", newname)), winslash="/")
+
 fix_feedback(oldzip, newzip)
-
-
-
 
 
 library(exams2forms)

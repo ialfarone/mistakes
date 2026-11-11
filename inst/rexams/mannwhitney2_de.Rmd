@@ -58,7 +58,7 @@ answerlist(t$alternatives, markup="markdown")
 
 Solution
 ========
-Die competing proportion der Gruppe A wird folgendermaßen berechnet: `r t$solution`
+Die competing proportion der Gruppe A wird folgendermaßen berechnet: $\mathrm{CP}=$ `r t$solution`
 
 ```{r solutionlist, echo = FALSE, results = "asis"}
 sol <- lapply(sol, FUN=gsub, pattern="\\n", replacement="")

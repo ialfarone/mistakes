@@ -76,7 +76,9 @@ Eine Gruppe von Forscher:innen führte eine Studie durch, um die Wirksamkeit zwe
 Die Studierenden wurden nach dem Zufallsprinzip entweder Methode A (interaktives Lernen) oder Methode B (herkömmlicher Unterricht) zugewiesen, mit `r n_a` bzw. `r n_b` Studierenden. Am Ende des Kurses absolvierten alle Studierenden denselben Leistungstest.
 Der Vergleich der Testergebnisse jeder einzelnen Person aus Methode A mit den Testergebnissen jeder einzelnen Person aus Methode B ergab `r n_a * n_b` paarweise Vergleiche.
 Studierende, die mit Methode A unterrichtet wurden, erzielten in `r wins_a` Vergleichen höhere Punktzahlen,
-Studierende, die mit Methode B unterrichtet wurden, erzielten in `r wins_b` Vergleichen höhere Punktzahlen, und bei `r ties` Vergleichen gab es Ties
+Studierende, die mit Methode B unterrichtet wurden, erzielten in `r wins_b` Vergleichen höhere Punktzahlen, und bei `r ties` Vergleichen gab es Ties.
+
+
 Berechne die Mann-Whitney-$U$-Statistik für Methode A.
 
 ```{r questionlist, echo = FALSE, results = "asis"}
@@ -85,7 +87,7 @@ answerlist(t$alternatives, markup="markdown")
 
 Solution
 ========
-Die $U$-Statistik wird berechnet, indem für jeden Vergleich, bei dem Methode A höhere Punktzahlen erzielte, ein Punkt und für jeden Tie ein halber Punkt gezählt wird. `r t$solution`
+Die $U$-Statistik wird berechnet, indem für jeden Vergleich, bei dem Methode A höhere Punktzahlen erzielte, ein Punkt und für jeden Tie ein halber Punkt gezählt wird. $U=$ `r t$solution`
 
 
 ```{r solutionlist, echo = FALSE, results = "asis"}
